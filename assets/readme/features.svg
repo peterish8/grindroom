@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" role="img" aria-label="GrindRoom feature icons">
+  <defs>
+    <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8F135"/>
+      <stop offset="100%" stop-color="#7A9E12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Log -->
+  <g transform="translate(40,30)">
+    <rect width="180" height="140" rx="20" fill="#141414" stroke="#2A2A2A" stroke-width="2"/>
+    <rect x="36" y="34" width="48" height="48" rx="12" fill="#1e2800"/>
+    <text x="60" y="66" text-anchor="middle" font-size="24">💪</text>
+    <text x="90" y="108" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Log Workouts</text>
+    <text x="90" y="128" text-anchor="middle" fill="#666" font-family="system-ui,sans-serif" font-size="11">10 presets · 3 levels</text>
+  </g>
+
+  <!-- Streak -->
+  <g transform="translate(270,30)">
+    <rect width="180" height="140" rx="20" fill="#141414" stroke="#2A2A2A" stroke-width="2"/>
+    <path d="M90 44 C90 30 98 26 102 14 C106 24 110 24 112 34 C116 22 124 20 126 36 C134 34 138 44 138 54 C138 70 124 82 110 82 C96 82 90 70 90 54Z" fill="url(#a)" transform="translate(-18,-6)"/>
+    <text x="90" y="108" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Streak Engine</text>
+    <text x="90" y="128" text-anchor="middle" fill="#666" font-family="system-ui,sans-serif" font-size="11">Daily consistency</text>
+  </g>
+
+  <!-- Rooms -->
+  <g transform="translate(500,30)">
+    <rect width="180" height="140" rx="20" fill="#141414" stroke="#2A2A2A" stroke-width="2"/>
+    <circle cx="70" cy="58" r="16" fill="#2A2A2A" stroke="url(#a)" stroke-width="2"/>
+    <circle cx="110" cy="58" r="16" fill="#2A2A2A" stroke="#555" stroke-width="2"/>
+    <rect x="52" y="78" width="76" height="8" rx="4" fill="#2A2A2A"/>
+    <rect x="52" y="78" width="52" height="8" rx="4" fill="url(#a)"/>
+    <text x="90" y="108" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Squad Rooms</text>
+    <text x="90" y="128" text-anchor="middle" fill="#666" font-family="system-ui,sans-serif" font-size="11">Live leaderboards</text>
+  </g>
+
+  <!-- Realtime -->
+  <g transform="translate(730,30)">
+    <rect width="180" height="140" rx="20" fill="#141414" stroke="rgba(200,241,53,0.25)" stroke-width="2"/>
+    <circle cx="90" cy="58" r="10" fill="#C8F135">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="108" y="63" fill="#C8F135" font-family="system-ui,sans-serif" font-size="12" font-weight="800">LIVE</text>
+    <path d="M48 82 H132" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+    <path d="M48 82 H108" stroke="url(#a)" stroke-width="6" stroke-linecap="round">
+      <animate attributeName="d" values="M48 82 H88;M48 82 H128;M48 82 H96" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <text x="90" y="108" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Realtime Sync</text>
+    <text x="90" y="128" text-anchor="middle" fill="#666" font-family="system-ui,sans-serif" font-size="11">Powered by Convex</text>
+  </g>
+</svg>
