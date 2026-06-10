@@ -1,89 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 240" role="img" aria-label="GrindRoom features">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 230" role="img" aria-label="GrindRoom features">
   <defs>
-    <linearGradient id="gLime" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#d8ff4a"/>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4fe42"/>
       <stop offset="100%" stop-color="#8eb012"/>
     </linearGradient>
-    <linearGradient id="gCard" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1a1a1a"/>
       <stop offset="100%" stop-color="#111"/>
     </linearGradient>
-    <filter id="flameGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="c1"><rect x="20" y="20" width="250" height="200" rx="22"/></clipPath>
-    <clipPath id="c2"><rect x="285" y="20" width="250" height="200" rx="22"/></clipPath>
-    <clipPath id="c3"><rect x="550" y="20" width="250" height="200" rx="22"/></clipPath>
-    <clipPath id="c4"><rect x="815" y="20" width="250" height="200" rx="22"/></clipPath>
   </defs>
 
-  <!-- Card 1: Log -->
-  <g clip-path="url(#c1)">
-    <rect x="20" y="20" width="250" height="200" rx="22" fill="url(#gCard)" stroke="#262626" stroke-width="1.5"/>
-    <rect x="21" y="21" width="248" height="48" rx="21" fill="#C8F135" opacity="0.04"/>
-    <g transform="translate(145, 72)" stroke="url(#gLime)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-      <path d="M-12 5h24M-12 5v-12a5 5 0 0 1 5-5h14a5 5 0 0 1 5 5v12"/>
-      <path d="M-8 5v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V5"/>
-      <path d="M-4 12h16" stroke="#C8F135" stroke-width="1.8"/>
-      <path d="M0 15l3 3 7-8" stroke="#C8F135" stroke-width="2.2"/>
+  <!-- ── Card 1 · Log Workouts ── -->
+  <g transform="translate(20, 15)">
+    <rect width="250" height="200" rx="20" fill="url(#card)" stroke="#262626" stroke-width="1.5"/>
+    <g transform="translate(125, 68)" fill="none" stroke="url(#lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-11" y="-14" width="22" height="28" rx="3"/>
+      <path d="M-7 6h14M-5 10l3 3 6-7" stroke="#C8F135" stroke-width="2"/>
     </g>
-    <text x="145" y="128" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Log Workouts</text>
-    <text x="145" y="148" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="500">10 presets · 3 levels</text>
-    <rect x="97" y="168" width="96" height="5" rx="2.5" fill="#222"/>
-    <rect x="97" y="168" width="68" height="5" rx="2.5" fill="url(#gLime)"/>
+    <text x="125" y="122" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Log Workouts</text>
+    <text x="125" y="142" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11">10 presets · 3 levels</text>
+    <rect x="77" y="162" width="96" height="5" rx="2.5" fill="#222"/>
+    <rect x="77" y="162" width="64" height="5" rx="2.5" fill="url(#lime)"/>
   </g>
 
-  <!-- Card 2: Streak — flame only, no bg circle -->
-  <g clip-path="url(#c2)">
-    <rect x="285" y="20" width="250" height="200" rx="22" fill="url(#gCard)" stroke="#262626" stroke-width="1.5"/>
-    <g transform="translate(410, 78)" filter="url(#flameGlow)">
-      <path d="M0-22C5-12 12-10 14 2C18-2 26-5 28 10C36 7 40 18 40 30C40 48 24 62 10 62C-4 62-18 48-18 30C-18 14-10 6 0-22Z" fill="url(#gLime)"/>
-      <path d="M-2 36C-2 26 2 22 6 10C10 18 14 18 17 26C22 22 27 26 27 36C27 46 20 54 10 54C4 54-2 46-2 36Z" fill="#111"/>
+  <!-- ── Card 2 · Streak Engine ── -->
+  <g transform="translate(285, 15)">
+    <rect width="250" height="200" rx="20" fill="url(#card)" stroke="#262626" stroke-width="1.5"/>
+    <g transform="translate(125, 68)" filter="url(#glow)">
+      <path d="M0-20C4-11 11-9 13 1C17-3 24-5 26 9C33 6 37 16 37 28C37 44 22 56 8 56C-6 56-20 44-20 28C-20 13-12 5 0-20Z" fill="url(#lime)"/>
+      <path d="M-2 32C-2 24 2 20 5 10C9 17 13 17 15 24C20 20 24 24 24 32C24 40 18 46 9 46C3 46-2 40-2 32Z" fill="#111"/>
     </g>
-    <text x="410" y="128" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Streak Engine</text>
-    <text x="410" y="148" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="500">Daily consistency</text>
-    <text x="410" y="182" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="20" font-weight="900">12 days</text>
+    <text x="125" y="122" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Streak Engine</text>
+    <text x="125" y="142" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11">Daily consistency</text>
+    <text x="125" y="176" text-anchor="middle" fill="url(#lime)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="20" font-weight="900">12 days</text>
   </g>
 
-  <!-- Card 3: Rooms -->
-  <g clip-path="url(#c3)">
-    <rect x="550" y="20" width="250" height="200" rx="22" fill="url(#gCard)" stroke="#262626" stroke-width="1.5"/>
-    <g transform="translate(675, 72)" fill="none" stroke="url(#gLime)" stroke-width="2.2" stroke-linecap="round">
-      <circle cx="-16" cy="-2" r="9" fill="#141414"/>
-      <circle cx="16" cy="-2" r="9" fill="#141414"/>
-      <circle cx="0" cy="-16" r="9" fill="#141414" stroke="#C8F135"/>
-      <path d="M-26 12h52" stroke="#333"/>
-      <path d="M-26 12h36" stroke="#C8F135"/>
+  <!-- ── Card 3 · Squad Rooms (simple users) ── -->
+  <g transform="translate(550, 15)">
+    <rect width="250" height="200" rx="20" fill="url(#card)" stroke="#262626" stroke-width="1.5"/>
+    <g transform="translate(125, 68)" fill="none" stroke-width="2.2" stroke-linecap="round">
+      <!-- left member -->
+      <circle cx="-14" cy="-6" r="7" stroke="#444"/>
+      <path d="M-22 10 Q-14 4 -6 10" stroke="#444"/>
+      <!-- right member (highlighted) -->
+      <circle cx="14" cy="-6" r="7" stroke="url(#lime)"/>
+      <path d="M6 10 Q14 4 22 10" stroke="url(#lime)"/>
     </g>
-    <text x="675" y="128" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Squad Rooms</text>
-    <text x="675" y="148" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="500">Live leaderboards</text>
-    <rect x="633" y="166" width="84" height="20" rx="10" fill="#0a0a0a" stroke="#2a2a2a"/>
-    <text x="675" y="180" text-anchor="middle" fill="#C8F135" font-family="ui-monospace, monospace" font-size="10" font-weight="700" letter-spacing="1.5">ABC123</text>
+    <text x="125" y="122" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Squad Rooms</text>
+    <text x="125" y="142" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11">Live leaderboards</text>
+    <rect x="83" y="162" width="84" height="20" rx="10" fill="#0a0a0a" stroke="#2a2a2a"/>
+    <text x="125" y="176" text-anchor="middle" fill="url(#lime)" font-family="ui-monospace, monospace" font-size="10" font-weight="700" letter-spacing="1.5">ABC123</text>
   </g>
 
-  <!-- Card 4: Realtime -->
-  <g clip-path="url(#c4)">
-    <rect x="815" y="20" width="250" height="200" rx="22" fill="url(#gCard)" stroke="rgba(200,241,53,0.35)" stroke-width="1.5"/>
-    <rect x="817" y="22" width="246" height="196" rx="20" fill="none" stroke="#C8F135" stroke-opacity="0.07"/>
-    <!-- LIVE badge inside card -->
-    <rect x="1005" y="34" width="46" height="18" rx="9" fill="#1a2200" stroke="rgba(200,241,53,0.4)"/>
-    <circle cx="1016" cy="43" r="3.5" fill="#C8F135">
-      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+  <!-- ── Card 4 · Realtime Sync (simple refresh) ── -->
+  <g transform="translate(815, 15)">
+    <rect width="250" height="200" rx="20" fill="url(#card)" stroke="rgba(200,241,53,0.3)" stroke-width="1.5"/>
+    <g transform="translate(125, 68)" fill="none" stroke="url(#lime)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- top arrow -->
+      <path d="M10-12a16 16 0 0 0-22 8"/>
+      <polyline points="2,-8 -6,-12 -6,-4"/>
+      <!-- bottom arrow -->
+      <path d="M-10 12a16 16 0 0 0 22-8"/>
+      <polyline points="-2,8 6,12 6,4"/>
+    </g>
+    <text x="125" y="122" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Realtime Sync</text>
+    <text x="125" y="142" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11">Powered by Convex</text>
+    <!-- live indicator -->
+    <circle cx="108" cy="172" r="4" fill="#C8F135">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
     </circle>
-    <text x="1032" y="47" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="9" font-weight="900">LIVE</text>
-    <g transform="translate(940, 72)" fill="none" stroke="url(#gLime)" stroke-width="2.2" stroke-linecap="round">
-      <circle cx="0" cy="0" r="16" stroke="#333"/>
-      <path d="M0-10v-4M-8-6l3 3M8-6l-3 3"/>
-      <path d="M-10 0a10 10 0 0 1 20 0" stroke="#C8F135">
-        <animate attributeName="stroke-dasharray" values="0 35;18 17;0 35" dur="2.5s" repeatCount="indefinite"/>
-      </path>
-    </g>
-    <text x="940" y="128" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Realtime Sync</text>
-    <text x="940" y="148" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="500">Powered by Convex</text>
-    <rect x="880" y="168" width="120" height="6" rx="3" fill="#222"/>
-    <rect x="880" y="168" width="88" height="6" rx="3" fill="url(#gLime)">
-      <animate attributeName="width" values="55;105;75;88" dur="3s" repeatCount="indefinite"/>
-    </rect>
+    <text x="118" y="176" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="10" font-weight="800">LIVE</text>
   </g>
 </svg>
