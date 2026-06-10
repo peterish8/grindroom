@@ -215,7 +215,7 @@ Then press `a` for Android, `i` for iOS, or `w` for web.
 ## ✦ Scoring Rules
 
 <p align="center">
-  <img src="assets/readme/scoring.svg" alt="Scoring tiers: 10, 20, 30 points" width="720"/>
+  <img src="assets/readme/scoring.svg" alt="Scoring tiers: 10, 20, 30 points" width="720" height="auto"/>
 </p>
 
 **Leaderboard sort:** `monthlyPoints` ↓ then `currentStreak` ↓  
