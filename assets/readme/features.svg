@@ -30,13 +30,14 @@
   <!-- ── Card 2 · Streak Engine ── -->
   <g transform="translate(285, 15)">
     <rect width="250" height="200" rx="20" fill="url(#card)" stroke="#262626" stroke-width="1.5"/>
-    <g transform="translate(125, 68)" filter="url(#glow)">
+    <!-- flame: smaller + higher so title has clear gap below -->
+    <g transform="translate(125, 52) scale(0.68)" filter="url(#glow)">
       <path d="M0-20C4-11 11-9 13 1C17-3 24-5 26 9C33 6 37 16 37 28C37 44 22 56 8 56C-6 56-20 44-20 28C-20 13-12 5 0-20Z" fill="url(#lime)"/>
       <path d="M-2 32C-2 24 2 20 5 10C9 17 13 17 15 24C20 20 24 24 24 32C24 40 18 46 9 46C3 46-2 40-2 32Z" fill="#111"/>
     </g>
-    <text x="125" y="122" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Streak Engine</text>
-    <text x="125" y="142" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11">Daily consistency</text>
-    <text x="125" y="176" text-anchor="middle" fill="url(#lime)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="20" font-weight="900">12 days</text>
+    <text x="125" y="130" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="14" font-weight="800">Streak Engine</text>
+    <text x="125" y="150" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11">Daily consistency</text>
+    <text x="125" y="180" text-anchor="middle" fill="url(#lime)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="20" font-weight="900">12 days</text>
   </g>
 
   <!-- ── Card 3 · Squad Rooms (simple users) ── -->
