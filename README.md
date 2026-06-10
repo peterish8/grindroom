@@ -79,21 +79,20 @@ GrindRoom is a **fitness accountability app** where athletes log bodyweight work
 ## ✦ App Flow
 
 ```mermaid
-flowchart LR
-    classDef accent fill:#C8F135,stroke:#0e0e0e,color:#0e0e0e,font-weight:bold
-    classDef dark fill:#141414,stroke:#2A2A2A,color:#ffffff
-    classDef muted fill:#1A1A1A,stroke:#333,color:#888
+graph LR
+    A[Splash / Auth] --> B[Home]
+    B --> C[Log Workout]
+    B --> D[Rooms]
+    D --> E[Room Detail]
+    B --> F[Profile]
+    C -->|logWorkout| G[(Convex DB)]
+    E -->|live query| G
+    G -->|reactive push| B
+    G -->|reactive push| E
 
-    A["🚀 Splash / Auth"]:::dark --> B["🏠 Home"]:::accent
-    B --> C["📝 Log Workout"]:::dark
-    B --> D["🏆 Rooms"]:::dark
-    D --> E["👥 Room Detail"]:::accent
-    B --> F["👤 Profile"]:::dark
-
-    C -->|"logWorkout()"| G[("Convex DB")]:::muted
-    E -->|"live query"| G
-    G -->|"reactive push"| B
-    G -->|"reactive push"| E
+    style B fill:#C8F135,stroke:#2A2A2A,color:#0e0e0e
+    style E fill:#C8F135,stroke:#2A2A2A,color:#0e0e0e
+    style G fill:#1A1A1A,stroke:#333,color:#fff
 ```
 
 ---
