@@ -46,13 +46,6 @@
     <rect x="1" y="1" width="1198" height="378" fill="url(#bgWash)"/>
     <rect x="1" y="1" width="1198" height="378" fill="url(#bgDepth)"/>
 
-    <!-- fine grid -->
-    <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="1">
-      <line x1="0" y1="95" x2="1200" y2="95"/>
-      <line x1="0" y1="190" x2="1200" y2="190"/>
-      <line x1="0" y1="285" x2="1200" y2="285"/>
-    </g>
-
     <!-- left accent -->
     <rect x="1" y="1" width="3" height="376" rx="1.5" fill="url(#lime)" opacity="0.9"/>
 
