@@ -3,8 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Log daily workouts. Keep your streak alive. Outgrind your squad.</strong><br/>
-  A dark-mode fitness accountability app built with React Native, Expo, and Convex.
+  A dark-mode fitness accountability app built with <strong>React Native</strong>, <strong>Expo</strong>, and <strong>Convex</strong>.
 </p>
 
 <p align="center">
