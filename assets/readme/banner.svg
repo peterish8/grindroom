@@ -1,29 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-label="GrindRoom banner">
   <defs>
-    <!-- base -->
-    <linearGradient id="bgBase" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0a0a0a"/>
-      <stop offset="40%" stop-color="#0d0d0d"/>
-      <stop offset="100%" stop-color="#0f100c"/>
-    </linearGradient>
-    <!-- subtle top-right wash -->
-    <radialGradient id="bgWash" cx="88%" cy="8%" r="65%">
-      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.07"/>
-      <stop offset="55%" stop-color="#C8F135" stop-opacity="0.02"/>
-      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
-    </radialGradient>
-    <!-- bottom-left depth -->
-    <radialGradient id="bgDepth" cx="12%" cy="92%" r="50%">
-      <stop offset="0%" stop-color="#000" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    <!-- smooth solid base — no banding -->
+    <radialGradient id="bgBase" cx="75%" cy="20%" r="85%">
+      <stop offset="0%" stop-color="#101100"/>
+      <stop offset="100%" stop-color="#0e0e0e"/>
     </radialGradient>
     <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#d4fe42"/>
       <stop offset="100%" stop-color="#9fc41a"/>
-    </linearGradient>
-    <linearGradient id="limeVert" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="border" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#2a2a2a"/>
@@ -43,8 +27,6 @@
 
   <g clip-path="url(#clip)">
     <rect x="1" y="1" width="1198" height="378" fill="url(#bgBase)"/>
-    <rect x="1" y="1" width="1198" height="378" fill="url(#bgWash)"/>
-    <rect x="1" y="1" width="1198" height="378" fill="url(#bgDepth)"/>
 
     <!-- left accent -->
     <rect x="1" y="1" width="3" height="376" rx="1.5" fill="url(#lime)" opacity="0.9"/>
@@ -65,8 +47,9 @@
     </g>
 
     <!-- ═══ left content ═══ -->
-    <rect x="72" y="44" width="84" height="84" rx="20" fill="#0a0a0a" stroke="#262626" stroke-width="1"/>
-    <image href="logo.png" x="72" y="44" width="84" height="84" clip-path="url(#logoRound)" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="72" y="44" width="84" height="84" rx="20" fill="#0e0e0e" stroke="#262626" stroke-width="1"/>
+    <!-- zoomed in to hide logo grid lines at edges -->
+    <image href="logo.png" x="62" y="34" width="104" height="104" clip-path="url(#logoRound)" preserveAspectRatio="xMidYMid slice"/>
 
     <text x="72" y="210" fill="#ffffff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="54" font-weight="900" letter-spacing="-2.5">
       Grind<tspan fill="url(#lime)">Room</tspan>
@@ -76,21 +59,18 @@
       Log workouts  ·  Build streaks  ·  Compete with your squad
     </text>
 
-    <line x1="72" y1="286" x2="600" y2="286" stroke="#1e1e1e" stroke-width="1"/>
-    <line x1="72" y1="286" x2="190" y2="286" stroke="url(#lime)" stroke-width="1.5" opacity="0.75"/>
-
-    <g transform="translate(72, 310)">
+    <g transform="translate(72, 298)">
       <rect width="168" height="40" rx="10" fill="#111" stroke="#222" stroke-width="1"/>
       <circle cx="22" cy="20" r="4" fill="#C8F135"/>
       <text x="36" y="25" fill="#bbb" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">5 workouts / day</text>
     </g>
 
-    <g transform="translate(256, 310)">
+    <g transform="translate(256, 298)">
       <rect width="168" height="40" rx="10" fill="#111" stroke="#222" stroke-width="1"/>
       <text x="84" y="25" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="800">10 · 20 · 30 pts</text>
     </g>
 
-    <g transform="translate(440, 310)">
+    <g transform="translate(440, 298)">
       <rect width="168" height="40" rx="10" fill="#111" stroke="rgba(200,241,53,0.25)" stroke-width="1"/>
       <circle cx="22" cy="20" r="4" fill="#C8F135">
         <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
@@ -98,7 +78,7 @@
       <text x="36" y="25" fill="#bbb" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Live leaderboards</text>
     </g>
 
-    <text x="72" y="368" fill="#3a3a3a" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">
+    <text x="72" y="356" fill="#3a3a3a" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">
       FITNESS ACCOUNTABILITY  ·  REACT NATIVE  ·  CONVEX
     </text>
   </g>
