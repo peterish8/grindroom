@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/banner.svg" alt="GrindRoom — fitness accountability app" width="100%"/>
+  <img src="assets/readme/banner.png" alt="GrindRoom — fitness accountability app" width="100%"/>
 </p>
 
 <p align="center">
