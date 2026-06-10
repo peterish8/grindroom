@@ -1,104 +1,112 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-label="GrindRoom banner">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#080808"/>
-      <stop offset="50%" stop-color="#0e0e0e"/>
-      <stop offset="100%" stop-color="#121800"/>
+    <!-- base -->
+    <linearGradient id="bgBase" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="40%" stop-color="#0d0d0d"/>
+      <stop offset="100%" stop-color="#0f100c"/>
     </linearGradient>
-    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#d4fe42"/>
-      <stop offset="100%" stop-color="#a8c820"/>
-    </linearGradient>
-    <linearGradient id="limeVert" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.14"/>
+    <!-- subtle top-right wash -->
+    <radialGradient id="bgWash" cx="88%" cy="8%" r="65%">
+      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.07"/>
+      <stop offset="55%" stop-color="#C8F135" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
     </radialGradient>
+    <!-- bottom-left depth -->
+    <radialGradient id="bgDepth" cx="12%" cy="92%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4fe42"/>
+      <stop offset="100%" stop-color="#9fc41a"/>
+    </linearGradient>
+    <linearGradient id="limeVert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="50%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#2e3318"/>
+    </linearGradient>
     <clipPath id="clip">
-      <rect width="1200" height="380" rx="20" ry="20"/>
+      <rect x="1" y="1" width="1198" height="378" rx="23" ry="23"/>
     </clipPath>
   </defs>
 
+  <!-- outer rounded border -->
+  <rect x="0.5" y="0.5" width="1199" height="379" rx="24" ry="24" fill="url(#bgBase)" stroke="url(#border)" stroke-width="1"/>
+
   <g clip-path="url(#clip)">
-    <!-- background -->
-    <rect width="1200" height="380" fill="url(#bg)"/>
-    <rect width="5" height="380" fill="url(#lime)"/>
-    <rect width="1200" height="2" y="0" fill="url(#lime)" opacity="0.5"/>
+    <rect x="1" y="1" width="1198" height="378" fill="url(#bgBase)"/>
+    <rect x="1" y="1" width="1198" height="378" fill="url(#bgWash)"/>
+    <rect x="1" y="1" width="1198" height="378" fill="url(#bgDepth)"/>
 
-    <!-- right decoration only — no text -->
-    <ellipse cx="940" cy="190" rx="200" ry="160" fill="url(#glow)"/>
-    <g transform="translate(900, 190)" fill="none" stroke-linecap="round">
-      <path d="M-80 50 A 80 80 0 1 1 80 50" stroke="#222" stroke-width="14"/>
-      <path d="M-80 50 A 80 80 0 0 1 80 50" stroke="url(#lime)" stroke-width="14"/>
-      <circle cx="0" cy="10" r="52" fill="#111" stroke="#1e1e1e" stroke-width="2"/>
-      <text x="0" y="18" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" font-weight="900">5</text>
-      <text x="0" y="36" text-anchor="middle" fill="#555" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="9" font-weight="700" letter-spacing="1">GOAL</text>
+    <!-- fine grid -->
+    <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="1">
+      <line x1="0" y1="95" x2="1200" y2="95"/>
+      <line x1="0" y1="190" x2="1200" y2="190"/>
+      <line x1="0" y1="285" x2="1200" y2="285"/>
     </g>
 
-    <!-- ═══ LEFT CONTENT BLOCK — fixed positions, no overlap ═══ -->
-    <g id="content">
+    <!-- left accent -->
+    <rect x="1" y="1" width="3" height="376" rx="1.5" fill="url(#lime)" opacity="0.9"/>
 
-      <!-- row 1: logo badge -->
-      <g transform="translate(72, 52)">
-        <rect width="76" height="76" rx="18" fill="#141414" stroke="#2a2a2a" stroke-width="1.5"/>
-        <rect width="76" height="76" rx="18" fill="url(#limeVert)"/>
-        <text x="38" y="50" text-anchor="middle" fill="url(#lime)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" font-weight="900" letter-spacing="-1">GR</text>
-      </g>
-
-      <!-- row 2: title — 40px gap below badge (ends y=128) -->
-      <text x="72" y="172"
-        fill="#ffffff"
-        font-family="Segoe UI, Inter, system-ui, sans-serif"
-        font-size="54" font-weight="900" letter-spacing="-2.5">
-        Grind<tspan fill="url(#lime)">Room</tspan>
-      </text>
-
-      <!-- row 3: subtitle — 36px below title -->
-      <text x="72" y="218"
-        fill="#8a8a8a"
-        font-family="Segoe UI, Inter, system-ui, sans-serif"
-        font-size="16" font-weight="500">
-        Log workouts  ·  Build streaks  ·  Compete with your squad
-      </text>
-
-      <!-- row 4: divider -->
-      <line x1="72" y1="248" x2="600" y2="248" stroke="#222" stroke-width="1"/>
-      <line x1="72" y1="248" x2="190" y2="248" stroke="url(#lime)" stroke-width="1.5" opacity="0.8"/>
-
-      <!-- row 5: stat chips — y=272, each 168×40, 16px gaps -->
-      <!-- chip 1 -->
-      <g transform="translate(72, 272)">
-        <rect width="168" height="40" rx="10" fill="#141414" stroke="#252525" stroke-width="1"/>
-        <circle cx="22" cy="20" r="4" fill="#C8F135"/>
-        <text x="36" y="25" fill="#ccc" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">5 workouts / day</text>
-      </g>
-
-      <!-- chip 2 -->
-      <g transform="translate(256, 272)">
-        <rect width="168" height="40" rx="10" fill="#141414" stroke="#252525" stroke-width="1"/>
-        <text x="84" y="25" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="800">10 · 20 · 30 pts</text>
-      </g>
-
-      <!-- chip 3 -->
-      <g transform="translate(440, 272)">
-        <rect width="168" height="40" rx="10" fill="#141414" stroke="rgba(200,241,53,0.3)" stroke-width="1"/>
-        <circle cx="22" cy="20" r="4" fill="#C8F135">
-          <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-        </circle>
-        <text x="36" y="25" fill="#ccc" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Live leaderboards</text>
-      </g>
-
-      <!-- row 6: tagline — y=344, 32px below chips -->
-      <text x="72" y="344"
-        fill="#444"
-        font-family="Segoe UI, Inter, system-ui, sans-serif"
-        font-size="11" font-weight="700" letter-spacing="2.5">
-        FITNESS ACCOUNTABILITY  ·  REACT NATIVE  ·  CONVEX
-      </text>
-
+    <!-- ═══ daily goal — full circle ring ═══ -->
+    <g transform="translate(930, 190)">
+      <!-- track -->
+      <circle r="78" fill="none" stroke="#1c1c1c" stroke-width="10"/>
+      <!-- progress (5/5 complete) -->
+      <circle r="78" fill="none" stroke="url(#lime)" stroke-width="10" stroke-linecap="round"
+        stroke-dasharray="490.1" stroke-dashoffset="0"
+        transform="rotate(-90)"/>
+      <!-- inner disc -->
+      <circle r="60" fill="#0b0b0b" stroke="#1a1a1a" stroke-width="1"/>
+      <!-- center label -->
+      <text y="-6" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="32" font-weight="900" font-variant="tabular-nums">5/5</text>
+      <text y="14" text-anchor="middle" fill="#666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1.8">GOAL</text>
     </g>
+
+    <!-- ═══ left content ═══ -->
+    <g transform="translate(72, 52)">
+      <rect width="76" height="76" rx="18" fill="#121212" stroke="#262626" stroke-width="1"/>
+      <rect width="76" height="76" rx="18" fill="url(#limeVert)"/>
+      <text x="38" y="50" text-anchor="middle" fill="url(#lime)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" font-weight="900" letter-spacing="-1">GR</text>
+    </g>
+
+    <text x="72" y="172" fill="#ffffff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="54" font-weight="900" letter-spacing="-2.5">
+      Grind<tspan fill="url(#lime)">Room</tspan>
+    </text>
+
+    <text x="72" y="218" fill="#8a8a8a" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="16" font-weight="500">
+      Log workouts  ·  Build streaks  ·  Compete with your squad
+    </text>
+
+    <line x1="72" y1="248" x2="600" y2="248" stroke="#1e1e1e" stroke-width="1"/>
+    <line x1="72" y1="248" x2="190" y2="248" stroke="url(#lime)" stroke-width="1.5" opacity="0.75"/>
+
+    <g transform="translate(72, 272)">
+      <rect width="168" height="40" rx="10" fill="#111" stroke="#222" stroke-width="1"/>
+      <circle cx="22" cy="20" r="4" fill="#C8F135"/>
+      <text x="36" y="25" fill="#bbb" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">5 workouts / day</text>
+    </g>
+
+    <g transform="translate(256, 272)">
+      <rect width="168" height="40" rx="10" fill="#111" stroke="#222" stroke-width="1"/>
+      <text x="84" y="25" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="800">10 · 20 · 30 pts</text>
+    </g>
+
+    <g transform="translate(440, 272)">
+      <rect width="168" height="40" rx="10" fill="#111" stroke="rgba(200,241,53,0.25)" stroke-width="1"/>
+      <circle cx="22" cy="20" r="4" fill="#C8F135">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="36" y="25" fill="#bbb" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">Live leaderboards</text>
+    </g>
+
+    <text x="72" y="344" fill="#3a3a3a" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">
+      FITNESS ACCOUNTABILITY  ·  REACT NATIVE  ·  CONVEX
+    </text>
   </g>
 </svg>
