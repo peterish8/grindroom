@@ -274,5 +274,5 @@ This is a private project. If you have access:
 ---
 
 <p align="center">
-  <img src="assets/readme/footer.svg" alt="GrindRoom footer" width="700"/>
+  <img src="assets/readme/footer.png" alt="GrindRoom footer" width="700"/>
 </p>
