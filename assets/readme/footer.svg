@@ -1,21 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" role="img" aria-label="GrindRoom footer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" role="img" aria-label="GrindRoom footer">
   <defs>
     <linearGradient id="fLime" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#C8F135" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#C8F135" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#C8F135" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#C8F135" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="fLimeV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4fe42"/>
+      <stop offset="100%" stop-color="#9bc41a"/>
+    </linearGradient>
   </defs>
-  <line x1="120" y1="20" x2="680" y2="20" stroke="url(#fLime)" stroke-width="1"/>
-  <g transform="translate(400, 48)" fill="none" stroke="#C8F135" stroke-width="2" stroke-linecap="round">
-    <rect x="-10" y="-8" width="20" height="16" rx="3" fill="#141414"/>
-    <line x1="-6" y1="8" x2="6" y2="8"/>
-    <line x1="0" y1="-8" x2="0" y2="-14"/>
+
+  <!-- top rule -->
+  <line x1="80" y1="24" x2="820" y2="24" stroke="url(#fLime)" stroke-width="1"/>
+
+  <!-- center badge -->
+  <g transform="translate(450, 62)">
+    <rect x="-28" y="-28" width="56" height="56" rx="14" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="14" fill="url(#fLimeV)"/>
+    <text x="0" y="8" text-anchor="middle" fill="url(#badge)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="22" font-weight="900" letter-spacing="-1">GR</text>
   </g>
-  <text x="400" y="78" text-anchor="middle" fill="#555" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="13" font-weight="600">
-    Built with discipline · Shipped with Convex
+
+  <!-- wordmark -->
+  <text x="450" y="118" text-anchor="middle" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="18" font-weight="800" letter-spacing="-0.5">
+    Grind<tspan fill="url(#badge)">Room</tspan>
   </text>
-  <text x="400" y="96" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="2">
-    GRINDROOM v1.0.0
+
+  <!-- tagline -->
+  <text x="450" y="138" text-anchor="middle" fill="#555" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="500">
+    Built with discipline  ·  Shipped with Convex
+  </text>
+
+  <!-- bottom meta row -->
+  <line x1="180" y1="148" x2="720" y2="148" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="450" y="162" text-anchor="middle" fill="#444" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
+    <tspan fill="#C8F135" font-weight="800">v1.0.0</tspan>
+    <tspan fill="#333">  ·  </tspan>
+    <tspan fill="#444">com.pratscodes8.grindroom</tspan>
+    <tspan fill="#333">  ·  </tspan>
+    <tspan fill="#444">© 2026</tspan>
   </text>
 </svg>

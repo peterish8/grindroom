@@ -274,9 +274,5 @@ This is a private project. If you have access:
 ---
 
 <p align="center">
-  <img src="assets/readme/footer.svg" alt="GrindRoom footer" width="600"/>
-</p>
-
-<p align="center">
-  <sub>© 2026 GrindRoom · <code>com.pratscodes8.grindroom</code></sub>
+  <img src="assets/readme/footer.svg" alt="GrindRoom footer" width="700"/>
 </p>
