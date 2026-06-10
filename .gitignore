@@ -39,3 +39,10 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Play Store credentials
+credentials.json
+ANDROID_CREDENTIALS_BACKUP.txt
+
+# Convex dev logs
+.convex-dev.*.log
