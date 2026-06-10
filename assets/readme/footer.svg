@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" role="img" aria-label="GrindRoom footer">
+  <defs>
+    <linearGradient id="fLime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8F135" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#C8F135" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="120" y1="20" x2="680" y2="20" stroke="url(#fLime)" stroke-width="1"/>
+  <g transform="translate(400, 48)" fill="none" stroke="#C8F135" stroke-width="2" stroke-linecap="round">
+    <rect x="-10" y="-8" width="20" height="16" rx="3" fill="#141414"/>
+    <line x1="-6" y1="8" x2="6" y2="8"/>
+    <line x1="0" y1="-8" x2="0" y2="-14"/>
+  </g>
+  <text x="400" y="78" text-anchor="middle" fill="#555" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="13" font-weight="600">
+    Built with discipline · Shipped with Convex
+  </text>
+  <text x="400" y="96" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="2">
+    GRINDROOM v1.0.0
+  </text>
+</svg>

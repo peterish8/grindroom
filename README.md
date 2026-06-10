@@ -216,25 +216,7 @@ Then press `a` for Android, `i` for iOS, or `w` for web.
 ## ✦ Scoring Rules
 
 <p align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 90" width="600">
-    <defs>
-      <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#3a4900"/>
-        <stop offset="100%" stop-color="#C8F135"/>
-      </linearGradient>
-    </defs>
-    <rect x="10" y="10" width="180" height="70" rx="16" fill="#141414" stroke="#2A2A2A"/>
-    <text x="100" y="38" text-anchor="middle" fill="#888" font-family="system-ui" font-size="11" font-weight="700">BEGINNER</text>
-    <text x="100" y="64" text-anchor="middle" fill="#C8F135" font-family="system-ui" font-size="26" font-weight="800">10 pts</text>
-
-    <rect x="210" y="10" width="180" height="70" rx="16" fill="#141414" stroke="#2A2A2A"/>
-    <text x="300" y="38" text-anchor="middle" fill="#888" font-family="system-ui" font-size="11" font-weight="700">MEDIUM</text>
-    <text x="300" y="64" text-anchor="middle" fill="#C8F135" font-family="system-ui" font-size="26" font-weight="800">20 pts</text>
-
-    <rect x="410" y="10" width="180" height="70" rx="16" fill="#141414" stroke="url(#g1)" stroke-width="2"/>
-    <text x="500" y="38" text-anchor="middle" fill="#888" font-family="system-ui" font-size="11" font-weight="700">ADVANCED</text>
-    <text x="500" y="64" text-anchor="middle" fill="#C8F135" font-family="system-ui" font-size="26" font-weight="800">30 pts</text>
-  </svg>
+  <img src="assets/readme/scoring.svg" alt="Scoring tiers: 10, 20, 30 points" width="720"/>
 </p>
 
 **Leaderboard sort:** `monthlyPoints` ↓ then `currentStreak` ↓  
@@ -292,14 +274,7 @@ This is a private project. If you have access:
 ---
 
 <p align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 48" width="400">
-    <text x="200" y="22" text-anchor="middle" fill="#444" font-family="system-ui,sans-serif" font-size="13" font-weight="600">
-      Built with discipline. Shipped with Convex.
-    </text>
-    <text x="200" y="42" text-anchor="middle" fill="#C8F135" font-family="system-ui,sans-serif" font-size="14" font-weight="800">
-      GrindRoom v1.0.0
-    </text>
-  </svg>
+  <img src="assets/readme/footer.svg" alt="GrindRoom footer" width="600"/>
 </p>
 
 <p align="center">

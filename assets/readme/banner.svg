@@ -1,65 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="GrindRoom banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="GrindRoom banner">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e0e0e"/>
-      <stop offset="55%" stop-color="#141414"/>
-      <stop offset="100%" stop-color="#1a2200"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="45%" stop-color="#101010"/>
+      <stop offset="100%" stop-color="#161c00"/>
     </linearGradient>
-    <linearGradient id="lime" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C8F135"/>
-      <stop offset="100%" stop-color="#9BC41A"/>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8ff4a"/>
+      <stop offset="100%" stop-color="#9fc41a"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="18" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="limeSoft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C8F135" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C8F135" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#C8F135" stroke-opacity="0.06" stroke-width="1"/>
-    </pattern>
+    <clipPath id="round">
+      <rect width="1200" height="340" rx="24" ry="24"/>
+    </clipPath>
   </defs>
 
-  <rect width="1200" height="300" fill="url(#bg)"/>
-  <rect width="1200" height="300" fill="url(#grid)"/>
-  <circle cx="980" cy="60" r="110" fill="#C8F135" opacity="0.08" filter="url(#glow)"/>
-  <circle cx="160" cy="250" r="80" fill="#C8F135" opacity="0.05"/>
+  <g clip-path="url(#round)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="4" fill="url(#lime)"/>
+    <ellipse cx="920" cy="40" rx="220" ry="120" fill="url(#orb)" filter="url(#softGlow)"/>
+    <ellipse cx="180" cy="300" rx="160" ry="80" fill="url(#orb)" opacity="0.6"/>
 
-  <!-- Left: icon + text block -->
-  <g transform="translate(72, 68)">
-    <!-- Dumbbell — aligned to title cap-height, not overlapping text -->
-    <g transform="translate(0, 6)" fill="none" stroke="url(#lime)" stroke-width="8" stroke-linecap="round">
-      <rect x="0" y="14" width="14" height="34" rx="3" fill="#C8F135" stroke="none"/>
-      <rect x="78" y="14" width="14" height="34" rx="3" fill="#C8F135" stroke="none"/>
-      <line x1="14" y1="31" x2="78" y2="31" stroke-width="10"/>
+    <!-- subtle grid -->
+    <g opacity="0.35" stroke="#C8F135" stroke-opacity="0.07">
+      <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200"/>
+      <path d="M200 0V340M400 0V340M600 0V340M800 0V340M1000 0V340"/>
     </g>
 
-    <!-- Title row -->
-    <text x="108" y="46" fill="#ffffff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="52" font-weight="800" letter-spacing="-2">
-      Grind<tspan fill="url(#lime)">Room</tspan>
-    </text>
+    <!-- center content -->
+    <g transform="translate(600, 0)">
+      <!-- logo badge -->
+      <g transform="translate(-44, 52)">
+        <rect width="88" height="88" rx="22" fill="#141414" stroke="#2a2a2a" stroke-width="1.5"/>
+        <rect width="88" height="88" rx="22" fill="url(#limeSoft)"/>
+        <text x="44" y="58" text-anchor="middle" fill="url(#lime)" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="34" font-weight="900" letter-spacing="-1">GR</text>
+      </g>
 
-    <!-- Subtitle — two lines, clear gap below title -->
-    <text x="108" y="88" fill="#888888" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="17" font-weight="500">
-      Log workouts · Build streaks
-    </text>
-    <text x="108" y="114" fill="#888888" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="17" font-weight="500">
-      Compete with your squad
-    </text>
-  </g>
+      <!-- title -->
+      <text x="0" y="188" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="64" font-weight="900" letter-spacing="-3">
+        Grind<tspan fill="url(#lime)">Room</tspan>
+      </text>
 
-  <!-- Streak flame -->
-  <g transform="translate(1010, 88)">
-    <path d="M20 70 C20 42 34 34 40 10 C46 30 54 30 58 46 C64 28 78 24 80 52 C92 48 98 64 98 78 C98 102 78 118 58 118 C38 118 20 102 20 70Z" fill="#C8F135" opacity="0.9"/>
-    <path d="M42 92 C42 78 50 74 54 58 C58 70 64 70 66 80 C72 76 76 84 76 92 C76 104 66 112 56 112 C46 112 42 102 42 92Z" fill="#0e0e0e"/>
-  </g>
+      <!-- subtitle single line -->
+      <text x="0" y="228" text-anchor="middle" fill="#7a7a7a" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="18" font-weight="500" letter-spacing="0.2">
+        Log workouts  ·  Build streaks  ·  Compete with your squad
+      </text>
 
-  <!-- Progress arc -->
-  <g transform="translate(0, 0)">
-    <path d="M 720 230 A 70 70 0 1 1 860 230" fill="none" stroke="#2A2A2A" stroke-width="12" stroke-linecap="round"/>
-    <path d="M 720 230 A 70 70 0 0 1 860 230" fill="none" stroke="url(#lime)" stroke-width="12" stroke-linecap="round"/>
-    <text x="790" y="228" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="28" font-weight="800">5/5</text>
-    <text x="790" y="252" text-anchor="middle" fill="#666666" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="12" font-weight="600">DAILY GOAL</text>
+      <!-- stat pills -->
+      <g transform="translate(0, 252)">
+        <g transform="translate(-252, 0)">
+          <rect x="-72" y="0" width="144" height="44" rx="22" fill="#141414" stroke="#252525" stroke-width="1"/>
+          <circle cx="-48" cy="22" r="5" fill="#C8F135"/>
+          <text x="-34" y="27" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="13" font-weight="700">5 / day goal</text>
+        </g>
+        <g transform="translate(-84, 0)">
+          <rect x="-72" y="0" width="144" height="44" rx="22" fill="#141414" stroke="#252525" stroke-width="1"/>
+          <text x="0" y="27" text-anchor="middle" fill="#C8F135" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="13" font-weight="800">10 · 20 · 30 pts</text>
+        </g>
+        <g transform="translate(84, 0)">
+          <rect x="-72" y="0" width="144" height="44" rx="22" fill="#141414" stroke="rgba(200,241,53,0.28)" stroke-width="1"/>
+          <circle cx="48" cy="22" r="5" fill="#C8F135">
+            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <text x="-34" y="27" fill="#fff" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="13" font-weight="700">Live leaderboards</text>
+        </g>
+        <g transform="translate(252, 0)">
+          <rect x="-72" y="0" width="144" height="44" rx="22" fill="#141414" stroke="#252525" stroke-width="1"/>
+          <text x="0" y="27" text-anchor="middle" fill="#aaa" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="13" font-weight="700">Up to 20 members</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- decorative corner arcs -->
+    <path d="M 0 340 Q 0 260 70 260" fill="none" stroke="url(#lime)" stroke-opacity="0.15" stroke-width="2"/>
+    <path d="M 1200 340 Q 1200 260 1130 260" fill="none" stroke="url(#lime)" stroke-opacity="0.15" stroke-width="2"/>
   </g>
 </svg>
