@@ -38,13 +38,7 @@
     Built with discipline  ·  Shipped with Convex
   </text>
 
-  <!-- bottom meta row -->
-  <line x1="180" y1="148" x2="720" y2="148" stroke="#1e1e1e" stroke-width="1"/>
-  <text x="450" y="162" text-anchor="middle" fill="#444" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1">
-    <tspan fill="#C8F135" font-weight="800">v1.0.0</tspan>
-    <tspan fill="#333">  ·  </tspan>
-    <tspan fill="#444">com.pratscodes8.grindroom</tspan>
-    <tspan fill="#333">  ·  </tspan>
-    <tspan fill="#444">© 2026</tspan>
-  </text>
+  <!-- bottom meta -->
+  <line x1="280" y1="148" x2="620" y2="148" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="450" y="162" text-anchor="middle" fill="#555" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1">© 2026</text>
 </svg>
