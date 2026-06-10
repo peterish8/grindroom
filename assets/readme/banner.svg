@@ -41,6 +41,25 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <!-- abstract checkered grid -->
+    <pattern id="checkGrid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#C8F135" opacity="0.018"/>
+      <rect x="26" y="26" width="26" height="26" fill="#C8F135" opacity="0.018"/>
+      <path d="M0 26H52M26 0V52" stroke="#2a2a2a" stroke-width="0.6" opacity="0.55"/>
+      <path d="M0 0H52V52H0Z" fill="none" stroke="#1f1f1f" stroke-width="0.4" opacity="0.35"/>
+    </pattern>
+    <pattern id="diagHatch" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="80" stroke="#C8F135" stroke-width="0.5" opacity="0.07"/>
+      <line x1="40" y1="0" x2="40" y2="80" stroke="#C8F135" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+    <radialGradient id="gridFade" cx="38%" cy="48%" r="72%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="gridMask">
+      <rect x="1" y="1" width="1198" height="378" fill="url(#gridFade)"/>
+    </mask>
   </defs>
 
   <!-- outer rounded border -->
@@ -48,6 +67,12 @@
 
   <g clip-path="url(#clip)">
     <rect x="1" y="1" width="1198" height="378" fill="url(#bgBase)"/>
+
+    <!-- abstract checkered background -->
+    <g mask="url(#gridMask)">
+      <rect x="1" y="1" width="1198" height="378" fill="url(#checkGrid)"/>
+      <rect x="1" y="1" width="1198" height="378" fill="url(#diagHatch)"/>
+    </g>
 
     <!-- left accent -->
     <rect x="1" y="1" width="3" height="376" rx="1.5" fill="url(#lime)" opacity="0.9"/>
